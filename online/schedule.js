@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let row = `
             <tr>
             <td>${humanReadableDate(start, lastDate)}</td>
-            <td><a href="${item['url']}" target="_blank">${start.format('HH:mm')}</a></td>
+            <td><a href="${item['url']}#offerBlock" target="_blank">${start.format('HH:mm')}</a></td>
             <td>${item['city']}</td>
             </tr>
         `;
