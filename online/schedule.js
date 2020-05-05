@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
     function humanReadableDate(d, lastDate) {
         if (!d.isSame(lastDate, 'day')) {
             if (d.isSame(now, 'day')) {
-                return 'сегодня'
+                return d.format('сегодня, dddd')
             } else if (d.isSame(tomorrow, 'day')) {
-                return 'завтра'
+                return d.format('завтра, dddd')
             } else if (d.isSame(now, 'week')) {
-                return d.format('dddd')
+                return d.format('dddd, D MMMM')
             } else {
                 return d.format('D MMMM, dddd')
             }
