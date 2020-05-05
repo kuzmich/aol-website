@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const table = document.querySelector('tbody');
     const now = moment();
+    const halfAnHourAgo = moment().subtract(30, 'minutes');
     const tomorrow = moment().add(1, 'days');
     let lastDate = null;
 
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let item of schedule) {
         let start = moment(item['start']);
-        if (!start.isSameOrAfter(now, 'hour')) {
+        if (!start.isSameOrAfter(halfAnHourAgo)) {
             continue
         }
         let row = `
